@@ -1,0 +1,6 @@
+openai
+#faiss-cpu
+pandas
+#jupyter-datatables
+cassandra-driver
+python-dotenv
