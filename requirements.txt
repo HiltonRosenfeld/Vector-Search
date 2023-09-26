@@ -1,6 +1,11 @@
 openai
-#faiss-cpu
 pandas
-#jupyter-datatables
 cassandra-driver
 python-dotenv
+uvicorn
+fastapi
+
+cassio
+langchain
+pypdf
+tiktoken
