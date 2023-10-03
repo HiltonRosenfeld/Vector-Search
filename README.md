@@ -4,6 +4,10 @@
 
 ## Introduction
 
+This demo includes a number of Jupyter notebooks:
+1. Vector_Search_Basic - using only Vector Similarity Search
+2. Vector_Search_Hybrid - using both Vector Similarity Search and Filtering
+
 This demo requires an Astra account and an OpenAI account. 
 
 Please ensure that you have an openAI API key.
