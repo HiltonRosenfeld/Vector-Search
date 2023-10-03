@@ -1,4 +1,4 @@
-# Vector Search Basics
+# Vector Search
 
 <br />
 
@@ -7,6 +7,8 @@
 This demo requires an Astra account and an OpenAI account. 
 
 Please ensure that you have an openAI API key.
+
+
 
 ## Step 1: Create a vector search enabled database in Astra
 
@@ -110,6 +112,16 @@ A notebook is made of "cells". Select a cell by clicking on it and execute it wi
 
 ```
 jupyter notebook Vector_Search_Basics.ipynb
+```
+
+
+<br />
+
+# Step 5. Hybrid Search
+
+Run the alternate Jupyter Notebook:
+```
+jupyter notebook Vector_Search_Hybrid.ipynb
 ```
 
 
