@@ -4,13 +4,22 @@
 
 ## Introduction
 
-This demo includes a number of Jupyter notebooks:
+This demo includes a number of Jupyter notebooks as well as a web application.
+
+### Notebooks:
 1. Vector_Search_Basic - using only Vector Similarity Search
-2. Vector_Search_Hybrid - using both Vector Similarity Search and Filtering
+2. Vector_Search_Descriptions - extends the basic notebook by adding LLM generated consumer suitable product descriptions for each product. That vastly improves the relevance of results when searching teh catalogue.
+3. Vector_Search_Hybrid - extends the description notebook by using both Vector Similarity Search and Predicate Filtering.
 
-This demo requires an Astra account and an OpenAI account. 
+### Web Application
+1. A FastAPI application to provide a GUI
 
-Please ensure that you have an openAI API key.
+
+## Prerequisites
+- This demo requires an Astra account and an OpenAI account.
+- Please ensure that you have an openAI API key.
+
+<br>
 
 
 
@@ -108,27 +117,44 @@ This is a CSV file with four columns (separated by commas):
 
 <br />
 
-# Step 5. Run the Jupyter notebook
+# Step 5. Run the Jupyter notebooks
 
 A notebook is made of "cells". Select a cell by clicking on it and execute it with Shift+Enter. 
 
 > You may need to install Jupyter.
 
+## Step 5a. Basic
+Run the basic Jupyter Notebook:
 ```
 jupyter notebook Vector_Search_Basics.ipynb
+```
+<br />
+
+## Step 5b. Enhanced
+Run the enhanced Jupyter Notebook:
+```
+jupyter notebook Vector_Search_Hybrid.ipynb
 ```
 
 
 <br />
 
-# Step 5. Hybrid Search
-
-Run the alternate Jupyter Notebook:
+## Step 5c. Hybrid
+Run the hybrid Jupyter Notebook:
 ```
 jupyter notebook Vector_Search_Hybrid.ipynb
 ```
 
 
 
+
+<br />
+
+# Step 6. Run the FastAPI application
+This app runs under uvicorn.
+
+```
+uvicorn api.main:app
+```
 
 

@@ -70,7 +70,6 @@ async def login(text: Annotated[str, Form()], opts: Annotated[str, Form()]):
         m += "<h2>Vector Search Results</h2>"
         m += "<table cellspacing='0' cellpadding='5' border='1'>"
         
-        """
         m += "<tr><td><b>PID</b></td><td><b>Product Name</b></td><td><b>Product Description</td><td><b>Consumer Description</b></td></tr>"    
         for row in top_products:
             m += (f"<tr><td>{row['product_id']}</td><td>{row['product_name']}</td><td>{row['description']}</td><td>{row['consumer_description']}</td></tr>")
@@ -78,7 +77,7 @@ async def login(text: Annotated[str, Form()], opts: Annotated[str, Form()]):
         m += "<tr><td><b>PID</b></td><td><b>Product Name</b></td><td><b>Product Description</td></tr>"    
         for row in top_products:
             m += (f"<tr><td>{row['product_id']}</td><td>{row['product_name']}</td><td>{row['description']}</td></tr>")
-        
+        """
         m += "</table>"
 
     # LLM component
@@ -116,8 +115,8 @@ def vectorSearch(text):
     query = SimpleStatement(
         f"""
         SELECT * 
-        FROM products_table
-        ORDER BY openai_description_embedding ANN OF {output} LIMIT 5;
+        FROM products_table_hybrid
+        ORDER BY consumer_description_embedding ANN OF {output} LIMIT 5;
         """
         )
 
